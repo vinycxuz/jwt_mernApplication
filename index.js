@@ -10,3 +10,16 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
+mongoose.connect(STRING_CONNECTION)
+  .then(() => {
+    console.log('Connected to database');
+  })
+  .catch((error) => {
+    console.log('Error connecting to database', error);
+  });
+;
+
+app.use(cors({ origin: true, credentials: true }));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
