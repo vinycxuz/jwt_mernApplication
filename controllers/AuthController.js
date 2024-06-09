@@ -2,7 +2,7 @@ const User = require('../models/signup.model');
 const { createSecretToken } = require('../utils/secretToken');
 const bycrypt = require('bcrypt');
 
-module.exports.signup = async (req, res) => {
+module.exports.signup = async (req, res, next) => {
   try {
     const { email, username, password, date } = req.body;
     const existingUser =  await User.findOne({ email });
