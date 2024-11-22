@@ -1,7 +1,7 @@
 
 # JWT_Application
 
-This project is a different methods to make register and login using JWT. 
+This exercise is a different methods to make register and login using JWT. 
 First method is only using JWT module.
 Updating second method, using Google OAUth and passport
 
